@@ -1,0 +1,8 @@
+用pip
+python==3.6.13
+kashgari==2.0.1
+tensorflow
+tensorflow-addons
+
+用conda
+zlib-wapi (conda-forge)
