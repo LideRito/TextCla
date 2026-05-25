@@ -2,7 +2,7 @@
 
 Multi-class text classification on Chinese news articles using Long BERT + CNN, built with [kashgari](https://github.com/BrikerMan/Kashgari).
 
-> Originally developed as part of a team submission for the **National College Student Information Security Contest**. As a team member, I was responsible for this text classification module. The team was awarded the **National First Prize**. The code has been revisited and reorganized in 2026 as part of my internship application portfolio.
+> Originally developed as part of a team submission for the **National College Student Information Security Contest**. As a team member, I was responsible for this text classification module. The team was awarded the **National First Prize**. The code has been revisited and reorganized in 2026.
 
 ---
 
@@ -64,7 +64,7 @@ Using Long BERT instead of standard BERT extends the token limit from 512 to 8,1
 
 **Training**
 
-1. Download the Long BERT model (PyTorch format) from [HuggingFace](https://huggingface.co/OctopusMind/longbert-embedding-8k-zh) and place it under `long-bert/`.
+1. Download the Long BERT model from [HuggingFace](https://huggingface.co/OctopusMind/longbert-embedding-8k-zh) (PyTorch format) and place `pytorch_model.bin` and the config files under `long-bert/`.
 
 2. Convert the PyTorch checkpoint to TensorFlow format:
 
@@ -72,7 +72,7 @@ Using Long BERT instead of standard BERT extends the token limit from 512 to 8,1
 python bin2ckpt.py
 ```
 
-This outputs the converted checkpoint to `long-bert/tf_ckpt/`.
+This outputs the converted checkpoint to `long-bert/tf_ckpt/`. Copy the resulting `bert_ckpt.*` files back to `long-bert/` and rename them to `bert.ckpt.*` so that `train.py` can find them.
 
 3. Place the CNNews dataset under `cnews/`, then train:
 
