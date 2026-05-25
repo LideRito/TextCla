@@ -97,6 +97,9 @@ Loads the trained model from `bert_emb_model/` and classifies input text interac
 ```
 textCla/
 ├── train.py          # Main training script
+├── train2.py         # Experimental scripts (not for production use)
+├── train3.py         #   |
+├── train4.py         #   |
 ├── predict.py        # Interactive inference
 ├── bin2ckpt.py       # PyTorch → TensorFlow checkpoint converter
 ├── cnews/            # CNNews dataset
